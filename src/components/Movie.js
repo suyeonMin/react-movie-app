@@ -5,7 +5,7 @@ function Movie({id, coverImg, title, summary, genres}){
     return <div className="movie">
       <img src={coverImg} alt="movie thumnail" />
       <div className="content">
-        <h2><Link to={`/movie/${id}`}>{title}</Link></h2>
+        <h2><Link to={`/react-movie-app/movie/${id}`}>{title}</Link></h2>
         <p>{summary}</p>
         <ul className="genres">
           {genres.map(g => <li key={g}>#{g}</li>)}

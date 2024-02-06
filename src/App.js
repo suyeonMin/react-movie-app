@@ -4,10 +4,10 @@ import Home from "./routes/Home";
 import style from "./style.css";
 
 function App() {
-  return <Router basename={process.env.PUBLIC_URL}>
+  return <Router>
     <Routes>
       <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
-      <Route path={process.env.PUBLIC_URL + "/movie/:id"} element={<Sub />} />
+      <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Sub />} />
     </Routes>
   </Router>
 }
