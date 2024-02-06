@@ -7,8 +7,8 @@ import style from "./style.css";
 function App() {
   return <Router>
     <Routes>
-      <Route path="/react-movie-app/" element={<Home />} />
-      <Route path="/react-movie-app/movie/:id" element={<Sub />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/movie/:id" element={<Sub />} />
     </Routes>
   </Router>
 }
