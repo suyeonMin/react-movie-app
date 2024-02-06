@@ -1,0 +1,38 @@
+/* common */
+body {padding: 0; margin: 0; background-color: #222;}
+ul {padding: 0;}
+li {list-style: none;}
+
+/* home */
+.movies {display: flex; flex-wrap: wrap; gap: 30px; padding: 50px}
+.movies .movie {position: relative; padding: 20px; width: calc((100% - 90px) / 4); border: 2px solid #000; background-color: #fff; border-top-right-radius: 30px; border-bottom-left-radius: 30px; box-sizing: border-box;}
+.movies .movie img {max-width: 100%; transition: all .3s ease-in;}
+.movies .movie:hover img {transform: translateY(-50px);}
+
+.movies .movie a {color: #000; text-decoration: none;}
+.movies .movie a:hover {text-decoration: underline;}
+.movies .movie p {overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; max-height: 3.9em; line-height: 1.3em;}
+.movies .movie .genres {display: flex; flex-wrap: wrap; gap: 10px;}
+.movies .movie .genres li {color: #d1d1d1; font-style: italic;}
+.movies .movie .genres li:first-child {padding-left: 0;}
+
+
+/* sub */
+.sub {display: flex; gap: 50px; padding: 50px}
+.sub .content {width: calc(100% - 550px); color: #fff;}
+.sub .content h2 {font-size: 32px;}
+.sub .content .info li {margin-bottom: 5px; font-size: 18px;}
+.sub .content .genres {display: flex; gap: 10px; margin-top: 50px;}
+.sub .content .genres li {font-size: 14px; font-style: italic;}
+.sub .content .btn_home {display: block; margin-top: 50px; width: 120px; height: 40px; font-weight: bold; color: #000; text-align: center; line-height: 40px; background-color: rgba(255,255,255,.8); text-decoration: none; transition: all .3s;}
+.sub .content .btn_home:hover {background-color: rgba(255,255,255,1)}
+
+
+/* loading */
+.loading {position: fixed; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+.loader {width: 48px; height: 48px; border-radius: 50%; display: inline-block; border-top: 4px solid #FFF; border-right: 4px solid transparent; box-sizing: border-box; animation: rotation 1s linear infinite;}
+.loader::after {content: '';  box-sizing: border-box; position: absolute; left: 0; top: 0; width: 48px; height: 48px; border-radius: 50%; border-bottom: 4px solid #FF3D00; border-left: 4px solid transparent;}
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+} 
