@@ -35,7 +35,7 @@ function Sub(){
                         {movie.genres.map(g => <li key={g}>#{g}</li>)}
                     </ul>
 
-                    <Link to={"/"} className="btn_home">View More</Link>
+                    <Link to={process.env.PUBLIC_URL + "/"} className="btn_home">View More</Link>
                 </div>
             </div>
         )}
